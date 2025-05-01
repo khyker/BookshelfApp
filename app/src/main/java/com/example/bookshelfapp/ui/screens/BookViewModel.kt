@@ -5,7 +5,6 @@ import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import coil.network.HttpException
 import com.example.bookshelfapp.data.BookshelfRepository
-import com.example.bookshelfapp.model.BookList
 import kotlinx.coroutines.launch
 import okio.IOException
 import androidx.compose.runtime.getValue

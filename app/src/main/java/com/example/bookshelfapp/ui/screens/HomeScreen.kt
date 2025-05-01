@@ -127,7 +127,7 @@ fun BookCard(book: Book, modifier: Modifier = Modifier) {
 @Composable
 fun LoadingScreenPreview() {
     BookshelfAppTheme {
-        LoadingScreen()
+        LoadingScreen(Modifier.fillMaxSize().size(200.dp))
     }
 }
 
@@ -135,7 +135,19 @@ fun LoadingScreenPreview() {
 @Composable
 fun ErrorScreenPreview(){
     BookshelfAppTheme {
-        ErrorScreen({})
+        ErrorScreen({}, Modifier.fillMaxSize())
+    }
+}
+
+@Preview(showBackground = true)
+@Composable
+fun BookShelfScreenPreview() {
+    BookshelfAppTheme {
+        HomeScreen(
+            bookshelfUiState = BookshelfUiState.Success(),
+            retryAction = {},
+            modifier = Modifier
+        )
     }
 }
 
